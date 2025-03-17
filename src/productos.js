@@ -17,7 +17,7 @@ export const productos = [
         stock: 5,
         oferta: false, 
         descripcion: " Paleta de sombras con tonos neutros y cálidos. Texturas mate y satinadas para crear looks naturales y sofisticados.",  
-        categoria: "Ojos"
+        categoria: "ojos"
     }, 
     {
         id: 3, 
@@ -47,7 +47,7 @@ export const productos = [
         stock: 10,
         oferta: true,
         descripcion: "Rubores tonos tierra dan un brillo unico. Apto para todo tipo de piel.",
-        categoria: "Rostro"
+        categoria: "rostro"
     }, 
     {
         id: 6, 
@@ -61,7 +61,7 @@ export const productos = [
     }, 
     {
         id: 7, 
-        nombre: "Producto 3Rubores Compactos", 
+        nombre: "Rubores Compactos", 
         precio: 1800, 
         img: "public/images/rubor2.jpg",
         stock: 10,
@@ -77,6 +77,6 @@ export const productos = [
         stock: 10,
         oferta: true,
         descripcion: "Paleta de sombras con tonos dorados y cobrizos. Texturas metálicas y satinadas para crear looks glamorosos.",  
-        categoria: "4"
+        categoria: "ojos"
     }
 ];
