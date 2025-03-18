@@ -1,8 +1,9 @@
+import{Link } from "react-router-dom"
 import PropTypes from 'prop-types';
 import './Item.css';
 // import { LuHeart } from "react-icons/lu";
 
-function Item({ id, nombre, precio, img, usarFiltro }) {
+function Item({ id, nombre, precio, img }) {
     function agregarAlCarrito() {
         console.log("Compraste", { id, nombre, precio });
     } 
@@ -18,10 +19,14 @@ function Item({ id, nombre, precio, img, usarFiltro }) {
             </span>
         </div>
         
-        <img src={img || "imagen_por_defecto.jpg"} alt={nombre || "Producto"} className='item-image' />
+        <img src={img || "/ruta/de/imagen_por_defecto.jpg"} alt={nombre || "Producto"} className='item-image' />
         <div className='buttons-container'>
             <button disabled={!nombre} className="card-btn" onClick={agregarAlCarrito}>Agregar al carrito</button>
-            <button disabled={!nombre} className="card-btn" onClick={() => usarFiltro("Detalle", id)}>Ver detalle</button>
+            <Link to={`/detalle/${id}`}>
+                 <button disabled={!nombre} className="card-btn">
+                     Ver detalle
+                 </button>
+             </Link>
             {/* <button id='heart-button'><LuHeart /></button> */}
         </div>
       </div>

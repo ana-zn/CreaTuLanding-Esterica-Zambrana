@@ -1,9 +1,21 @@
 .card-detail{
      width: 100%;
+     padding: 80px 80px ;
      display: flex;
-     flex-direction: column;
+     flex-direction: row; 
+     box-sizing: border-box;
+     overflow: hidden;
 }
-.card-detail h2 {
-    font-family: poppins;
+.detail-item{
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", serif;
+    color:#EF6A3F ;
+    gap:16px,
+}
+
+.detail-item h2 {
+    font-size: 2rem;
+    font-weight: 400;
     
 }
