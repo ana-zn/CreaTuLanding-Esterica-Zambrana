@@ -1,16 +1,21 @@
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
 import NavBar from './components/navbar/navbar'; 
-import Banner from './components/bannerhero/banner'; 
 import ItemListContainer from './components/itemlist-container/ItemListContainer';
-// import Contador from './components/contador/contador';
+
 function App() {
   return (
     <>
-        <NavBar />
-        <Banner />
-        <ItemListContainer greetings= "Bienvenido Usuario"/>
-        {/* <Contador/> */}
+    <BrowserRouter>
+     <NavBar />
+     {/* <ItemListContainer/> */}
+     <Routes>
+        
+        <Route path="/" element={<ItemListContainer/>} />
+        <Route path="/categoria/:categoria" element={<ItemListContainer />} /> 
+        <Route path="*" element={<p>404 ROUTE NOT FOUND</p>} />
+      </Routes>
+    </BrowserRouter>
     </>
 ); 
 }

@@ -9,8 +9,11 @@
   .list-item{
     display: flex;
   }
-  li {
+  li{
     list-style: none;
+  }
+  a {
+    text-decoration: none;
     width: 100%;
     margin: 8px 16px;
     font-family: "Poppins", serif;
@@ -19,7 +22,7 @@
     position: relative;
   }
   
-  li::before {
+  a::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -30,7 +33,7 @@
     transition: width 0.3s ease-in-out;
   }
   
-  li:hover::before {
+  a:hover::before {
     width: 100%;
   }
   .button-navbar{

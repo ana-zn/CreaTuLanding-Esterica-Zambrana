@@ -17,6 +17,7 @@ function Item({ id, nombre, precio, img, usarFiltro }) {
                 ${precio !== undefined ? precio : "No Disponible"}
             </span>
         </div>
+        
         <img src={img || "imagen_por_defecto.jpg"} alt={nombre || "Producto"} className='item-image' />
         <div className='buttons-container'>
             <button disabled={!nombre} className="card-btn" onClick={agregarAlCarrito}>Agregar al carrito</button>
